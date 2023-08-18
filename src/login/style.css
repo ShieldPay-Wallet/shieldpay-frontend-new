@@ -1,0 +1,18 @@
+#label-name{
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 20.395px;
+    font-family: Roboto;
+    font-weight: 400;
+}
+a{
+    color: rgba(0, 0, 0, 0.60) !important;
+    font-size: 15px;
+    text-decoration: none !important;
+    
+}
+.form-check-input{
+    background-color: blueviolet;
+}
+.login-form{
+    height: 70vh;
+}
