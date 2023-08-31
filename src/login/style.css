@@ -16,3 +16,9 @@ a{
 .login-form{
     height: 70vh;
 }
+.form-div{
+    margin-top: 10%;
+}
+.reset-password{
+    height: 70vh;
+}

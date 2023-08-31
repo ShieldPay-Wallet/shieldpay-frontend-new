@@ -7,18 +7,17 @@ const Login = () =>{
     return(
         // login page
         <div className="container" id="my-container">
-        {/* <div className="outer-div"> */}
             
              <div className="form-part">
                  <div className="center-content text-center">
                     
                      <div className="container text-center form-div">
-                     <h2 className="mt-5">Welcome Back!</h2>
-                     <p className="sign-up-text text-dark">Login by entering the information below</p>
+                     <h2 className="mt-5 mb-3">Welcome Back!</h2>
+                     <p className="sign-up-text text-dark mb-5">Login by entering the information below</p>
                          <form className="login-form">
                             <div className="">
-                                <input placeholder="Email" className="mb-3 inputs" name="email" autoComplete="email"/>
-                                <input placeholder="Password" className="mb-3 inputs" name="password"/>
+                                <input placeholder="Email" className="mb-5 inputs" name="email" autoComplete="email"/> <br/>
+                                <input placeholder="Password" className="mb-5 inputs" name="password"/> <br/>
                                 <div className="d-flex justify-content-around" >
                                     <div class="form-check mb-3">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
@@ -26,8 +25,8 @@ const Login = () =>{
                                             Remember me
                                         </label>
                                     </div>
-                                    <a href="./Login" id="forgot-password">Forgot Password</a>
-                                    {/* <p className="text-secondary">Already have an Account?</p> */}
+                                    <a href="./ForgotPassword" id="forgot-password">Forgot Password</a>
+                                    
                                     
                                 </div>
                                 
@@ -44,7 +43,7 @@ const Login = () =>{
 
              </div>
         </div>
-    //  </div>
+  
     )
 
 }

@@ -1,28 +1,35 @@
 import React, { useEffect, useRef, useState } from "react";
 import Button from "../components/Button";
-import Modal from "../components/Modal"
-import "./style.css"
+import Modal from "../components/Modal";
+import "./style.css";
+import { useNavigate } from "react-router-dom";
 // import signImage from "../asset/signup.png";
 
 
 
 const SignUp = () =>{
+    let navigate = useNavigate();
     const [show,setShow]= useState(false)
     const modalRef = useRef(null)
      
     const handleSubmit = (e) =>{
         e.preventDefault();
         setShow(true)
+        
     }
-    const handleCancelClick = (event)=>{
+    const handleOutsideClick = (event)=>{
+     
         if(modalRef.current && !modalRef.current.contains(event.target)){
             setShow(false);
         }
     }
+    
     useEffect(()=>{
-        document.addEventListener('click', handleCancelClick);
+        document.addEventListener('click',handleOutsideClick);
+    
         return () => {
-        document.removeEventListener('click', handleCancelClick);
+          
+        document.removeEventListener('click', handleOutsideClick);
         }
     },[])
     return(
@@ -34,12 +41,12 @@ const SignUp = () =>{
                         <div className="container text-center form-div">
                         <h2>Welcome!</h2>
                         <p className="sign-up-text text-dark">Sign up by entering the information below</p>
-                            <form className="sign-up" onSubmit={handleSubmit} >
+                            <form className="sign-up" >
 
-                                <input placeholder="First Name" className="inputs" name="firstName" autoComplete="given-name"/>
-                                <input placeholder="Last Name" className="inputs" name="lastName" autoComplete="name"/>
-                                <input placeholder="Email" className="inputs" name="email" autoComplete="email"/>
-                                <input placeholder="Password" className=" inputs" name="password"/>
+                                <input placeholder="First Name" className="inputs" name="firstName" autoComplete="given-name"/> <br/>
+                                <input placeholder="Last Name" className="inputs" name="lastName" autoComplete="name"/> <br/>
+                                <input placeholder="Email" className="inputs" name="email" autoComplete="email"/> <br/>
+                                <input placeholder="Password" className=" inputs" name="password"/>  <br/>
                                 <div className="" id="redirection">
                                     <p className="text-secondary already">Already have an Account?</p>
                                     <div className="login">
@@ -47,11 +54,18 @@ const SignUp = () =>{
                                     </div>
                                    
                                 </div>
-                                <Modal show={show} ref={modalRef}> 
+                                <Modal show={show} onClose={()=> setShow(false)} ref={modalRef}> 
                                     <p>Kindly check your email to get your OTP number <br/> for Account verification</p>
                                 </Modal>
 
-                               <Button type="submit" style={{color:'#FFF',fontWeight:'400',fontSize: '30px',width:'250px',height:'50px',backgroundColor:'#55229E',borderRadius: '12.089px',border: '1.511px solid #56229E',fontFamily:'Roboto'}}> sign up</Button>
+                               <Button type="submit" style={{color:'#FFF',fontWeight:'400',fontSize: '30px',width:'250px',height:'50px',backgroundColor:'#55229E',borderRadius: '12.089px',border: '1.511px solid #56229E',fontFamily:'Roboto'}} 
+                               onClick={(e)=>
+                               {
+                                handleSubmit(e);
+                                navigate("/Otp")
+                               }}
+
+                               > sign up</Button>
                              
                                
                             </form>

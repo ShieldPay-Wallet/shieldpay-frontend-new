@@ -5,10 +5,10 @@ import "../registeration/style.css"
 import Modal from "../components/Modal";
 import Button from "../components/Button";
 import OtpInput from "../components/OtpInput";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Otp =()=>{
-    
+    let navigate = useNavigate();
     const [show,setShow]= useState(false)
     const modalRef = useRef(null)
 
@@ -51,16 +51,14 @@ const Otp =()=>{
                                 <OtpInput/> <br/>
                                 
                                 <Modal show={show} onClose={()=>setShow(false)} ref={modalRef} > 
-                                    <p>Your account have been successfully verified</p>
+                                    <p>Proceed to reset Password</p>
                                 </Modal>
 
                                <Button type="submit" style={{color:'#FFF',fontWeight:'600',fontSize: '30px',width:'250px',height:'50px',backgroundColor:'#55229E',borderRadius: '12.089px',border: '1.511px solid #56229E',fontFamily:'Roboto'}} onClick={(e)=>{
                                 handleClick(e);
-                               
-                               }
-
-                               }
-                               > Continue</Button>
+                                navigate("/ResetPassword")
+                                }
+                                }> Continue</Button>
                                
                             </form>
                         </div>
@@ -69,9 +67,6 @@ const Otp =()=>{
                    
 
                 </div>
-             {/* </div> */}
-
-             {/* </div> */}
        
         </>
     )
