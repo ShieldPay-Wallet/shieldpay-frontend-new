@@ -4,14 +4,16 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #efeded !important;
+    background-color:transparent !important;
 }
 
 .outer-div{
     width: 100%;
+    border-radius: 3px;
 
 }
 #my-container{
+  
     width: 60%;
     height: 100vh;
     padding: 1%;
@@ -28,6 +30,7 @@ body{
 
 }
 .center-content{
+    
     height: 100%;
     border-radius: 4px;
     background-color: #FFF;
@@ -41,12 +44,6 @@ body{
     background-color: #FFF;
  
 }
-a{
-    color: rgba(0, 0, 0, 0.60) !important;
-    font-size: 19px;
-    text-decoration: none !important;
-    
-}
 #redirection{
   display: flex;
   justify-content: space-between;
@@ -55,12 +52,17 @@ a{
 .login{
     margin-left: 10px;
 }
+input:focus { 
+    outline: none !important;
+    border-color: purple;
+    /* box-shadow: 0 0 10px #; */
+ }
 
 .inputs{
     width: 100%;
     max-width: 524px;
     height: 50px;
-    padding: 5px;
+    padding: 0 40px;
     border-radius: 10px;
     border: 2px solid #C4C4C4;
     background: #FFF;
@@ -69,7 +71,7 @@ a{
     width: 100%;
     max-width: 524px;
     height: 50px;
-    padding: 5px;
+    padding: 0 40px;
     border: 2px solid #C4C4C4;
     background: #FFF;
     border-bottom: none;
@@ -80,7 +82,7 @@ a{
     width: 100%;
     max-width: 524px;
     height: 50px;
-    padding: 5px;
+    padding: 0 40px;
     border: 2px solid #C4C4C4;
     background: #FFF;
     border-bottom-left-radius: 3px;
@@ -123,7 +125,7 @@ a{
     width: 100%;
 
 }
-::placeholder {
+/* ::placeholder {
     padding: 40px;
 }
 ::-webkit-input-placeholder {
@@ -136,7 +138,7 @@ a{
   /* Firefox 19+ */
   ::-moz-placeholder {
     padding: 40px;
-  }
+  } */
  .button-small{
     display: none;
  }

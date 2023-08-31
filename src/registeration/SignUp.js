@@ -39,8 +39,8 @@ const SignUp = () =>{
                     <div className="center-content text-center">
                        
                         <div className="container text-center form-div">
-                        <h2>Welcome!</h2>
-                        <p className="sign-up-text text-dark">Sign up by entering the information below</p>
+                        <h2 className="">Create Account!</h2>
+                        <p className="sign-up-text text-dark py-3">Sign up by entering the information below</p>
                             <form className="sign-up" >
 
                                 <input placeholder="First Name" className="inputs" name="firstName" autoComplete="given-name"/> <br/>
@@ -48,9 +48,9 @@ const SignUp = () =>{
                                 <input placeholder="Email" className="inputs" name="email" autoComplete="email"/> <br/>
                                 <input placeholder="Password" className=" inputs" name="password"/>  <br/>
                                 <div className="" id="redirection">
-                                    <p className="text-secondary already">Already have an Account?</p>
+                                    <p className="text-secondary">Already have an Account?</p>
                                     <div className="login">
-                                      <a href="./Login">Login</a>
+                                      <a href="./Login" className="ref">Login</a>
                                     </div>
                                    
                                 </div>

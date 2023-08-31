@@ -14,7 +14,7 @@ const Kyc2 = () =>{
                         <p className="text-dark">More Details About You</p>
                     </div>
                     <hr/>
-                    <h6 className=" text-dark px-5"> Next of Kin </h6>
+                    <h6 className=" text-dark px-5 mb-4"> Next of Kin </h6>
                      {/* <div className="form-div"> */}
                     
                          <form className="">
@@ -46,6 +46,7 @@ const Kyc2 = () =>{
                           
                             
                          </form>
+                         <a href="/Kyc1" className="mx-5 py-2 nav-linky">Prev</a>
                      </div>
                     
                  </div>

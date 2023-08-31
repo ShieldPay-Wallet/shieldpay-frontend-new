@@ -13,7 +13,7 @@ const Kyc1 = () =>{
                         <p className="text-dark">Kindly Complete Your Registeration</p>
                     </div>
                     <hr/>
-                    <h6 className=" text-dark px-5"> KYC </h6>
+                    <h6 className=" text-dark px-5 mb-4"> KYC </h6>
                      {/* <div className="form-div"> */}
                     
                          <form className="">
@@ -42,7 +42,7 @@ const Kyc1 = () =>{
                                     
                                 </div>                             
                          </form>
-                         <a href="..">Next</a>
+                         <a href="/Kyc2" className="float-end mx-4 py-2 nav-linky">Next</a>
                      </div>
                     
                  </div>
