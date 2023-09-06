@@ -55,7 +55,7 @@ body{
 input:focus { 
     outline: none !important;
     border-color: purple;
-    /* box-shadow: 0 0 10px #; */
+ 
  }
 
 .inputs{
@@ -240,8 +240,7 @@ input:focus {
         width: 100%;
     }
     .modal-contentt{
-        /* width: 523px;
-        height: 140px; */
+       
         margin-left: 1.5%;
         margin-top: 20%;
     }

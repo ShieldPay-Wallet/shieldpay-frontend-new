@@ -3,7 +3,7 @@ import Button from "../components/Button";
 import Modal from "../components/Modal";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
-// import signImage from "../asset/signup.png";
+
 
 
 
